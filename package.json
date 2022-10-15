@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
   },
-  "homepage": "https://github.com/carbondigitalus/semlinks-robots-parser#readme"
+  "homepage": "https://github.com/carbondigitalus/semlinks-robots-parser#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
