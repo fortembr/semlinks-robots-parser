@@ -19,7 +19,11 @@
     "sem",
     "links"
   ],
-  "author": "Carbon Digital <hello@carbondigital.us>",
+  "author": {
+    "name": "Carbon Digital",
+    "email": "hello@carbondigital.us",
+    "url": "https://carbondigital.us/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
