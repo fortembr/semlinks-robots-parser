@@ -1,0 +1,28 @@
+{
+  "name": "@carbondigital/robots-parser",
+  "version": "0.0.1",
+  "description": "Robots parser that is used in our SEO application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbondigitalus/semlinks-robots-parser.git"
+  },
+  "keywords": [
+    "seo",
+    "robots",
+    "parser",
+    "typescript",
+    "node",
+    "sem",
+    "links"
+  ],
+  "author": "Carbon Digital <hello@carbondigital.us>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
+  },
+  "homepage": "https://github.com/carbondigitalus/semlinks-robots-parser#readme"
+}
