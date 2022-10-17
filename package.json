@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/carbondigitalus/semlinks-robots-parser.git"
   },
+  "homepage": "https://github.com/carbondigitalus/semlinks-robots-parser#readme",
   "bugs": {
     "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
   },
