@@ -2,15 +2,6 @@
   "name": "@carbondigital/robots-parser",
   "version": "0.0.1",
   "description": "Robots parser that is used in our SEO application.",
-  "keywords": [
-    "seo",
-    "robots",
-    "parser",
-    "typescript",
-    "node",
-    "sem",
-    "links"
-  ],
   "author": {
     "name": "Carbon Digital",
     "email": "hello@carbondigital.us",
