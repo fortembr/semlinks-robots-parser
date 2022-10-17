@@ -27,4 +27,12 @@ export default class RobotsParser {
       value: line.substring(colonIndex + 1, len)
     };
   }
+
+  // check for user-agent
+  private checkDirective(line: LineSplit, value: LineType) {
+    if (line.directive.toLowerCase().includes(value)) {
+      return true;
+    }
+    return false;
+  }
 }
