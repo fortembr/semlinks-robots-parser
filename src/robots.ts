@@ -15,4 +15,16 @@ export default class RobotsParser {
     }
     return false;
   }
+
+  // split line by ":"
+  // each directive in the robots file is separated by colon
+  private splitLine(line: string): LineSplit {
+    const trimmedLine = this.trimWhitespace(line);
+    const len = trimmedLine.length;
+    const colonIndex = trimmedLine.indexOf(':');
+    return {
+      directive: line.substring(0, colonIndex),
+      value: line.substring(colonIndex + 1, len)
+    };
+  }
 }
