@@ -6,3 +6,9 @@ export enum LineType {
   sitemap = 'sitemap',
   crawlDelay = 'crawl-delay'
 }
+
+export interface LineSplit {
+  directive: string;
+  value: string;
+}
+
