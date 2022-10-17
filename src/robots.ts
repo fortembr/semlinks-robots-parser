@@ -1,3 +1,4 @@
+import { readFileSync } from 'fs';
 export default class RobotsParser {
   constructor() {}
 
