@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
   },
+  "main": "./lib/index.js",
   "devDependencies": {
     "@types/node": "^18.11.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
