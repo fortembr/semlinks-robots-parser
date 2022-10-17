@@ -1,4 +1,6 @@
 import { readFileSync } from 'fs';
+import { Line, LineType, LineSplit } from './options';
+
 export default class RobotsParser {
   constructor() {}
 
