@@ -12,3 +12,7 @@ export interface LineSplit {
   value: string;
 }
 
+export interface Line {
+  type: LineType;
+  content: LineSplit;
+}
