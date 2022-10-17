@@ -39,5 +39,14 @@
   "lint-staged": {
     "*.ts": "eslint --cache --cache-location .eslintcache --fix"
   },
+  "keywords": [
+    "seo",
+    "robots",
+    "parser",
+    "typescript",
+    "node",
+    "sem",
+    "links"
+  ],
   "type": "module"
 }
