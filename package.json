@@ -36,5 +36,8 @@
   "engines": {
     "node": ">=16.14.0"
   },
+  "lint-staged": {
+    "*.ts": "eslint --cache --cache-location .eslintcache --fix"
+  },
   "type": "module"
 }
