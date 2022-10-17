@@ -8,6 +8,10 @@
     "url": "https://carbondigital.us/"
   },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carbondigitalus/semlinks-robots-parser.git"
+  },
   "bugs": {
     "url": "https://github.com/carbondigitalus/semlinks-robots-parser/issues"
   },
