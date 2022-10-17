@@ -72,4 +72,13 @@ export default class RobotsParser {
       };
     return parsedLine;
   }
+
+  readFile(filePath: string) {
+    console.log('readFile, filePath: ', filePath);
+    const readStream = readFileSync(filePath, 'utf8');
+    console.log('readFile, readStream: ', readStream);
+    const array = this.parseLinesIntoArray(readStream);
+    console.log('readFile, array: ', array);
+    return array;
+  }
 }
