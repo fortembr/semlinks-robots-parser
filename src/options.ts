@@ -8,11 +8,11 @@ export enum LineType {
 }
 
 export interface LineSplit {
-  directive: string
-  value: string
+  directive: string;
+  value: string;
 }
 
 export interface Line {
-  type: LineType
-  content: LineSplit
+  type: LineType;
+  content: LineSplit;
 }
