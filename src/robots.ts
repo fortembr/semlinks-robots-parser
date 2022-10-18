@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { LineType, LineSplit } from './options';
 
-export default class RobotsParser {
+export class RobotsParser {
   constructor() {}
 
   // remove whitespace before & after line to make parsing each line easier
