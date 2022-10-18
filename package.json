@@ -25,6 +25,7 @@
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
+    "npm:publish": "npm publish --access public",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "start:dev": "nodemon -L ./src/index.ts && tsc -w",
