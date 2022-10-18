@@ -73,7 +73,7 @@ export class RobotsParser {
     return parsedLine;
   }
 
-  readFile(filePath: string) {
+  public readFile(filePath: string) {
     console.log('readFile, filePath: ', filePath);
     const readStream = readFileSync(filePath, 'utf8');
     console.log('readFile, readStream: ', readStream);
