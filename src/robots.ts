@@ -69,7 +69,7 @@ export class RobotsParser {
     if (isAllow) return { type: LineType.allow, value: parsedLine };
     // check for disallow and return values
     const isDisallow = this.checkDirective(parsedLine, LineType.disallow);
-    if (isDisallow) return { type: LineType.disallow, value: parsedLine };
+    if (isDisallow) return { type: LineType.disallow, content: parsedLine.value };
     // check for crawl-delay and return values
     const isCrawlDelay = this.checkDirective(parsedLine, LineType.crawlDelay);
     if (isCrawlDelay) return { type: LineType.crawlDelay, value: parsedLine };
