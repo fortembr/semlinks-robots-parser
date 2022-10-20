@@ -18,6 +18,15 @@ export class RobotsParser {
     return line.substring(1) === commentCharacterFlag;
   }
 
+  // flag blank lines
+  private isBlank(line: string): boolean {
+    const cleanLine = this.trimWhitespace(line);
+    if (cleanLine === '' || cleanLine === ' ') {
+      return true;
+    }
+    return false;
+  }
+
   // split line by ":"
   // each directive in the robots file is separated by colon
   private splitLine(line: string): LineSplit {
