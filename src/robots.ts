@@ -97,11 +97,14 @@ export class RobotsParser {
         input: createReadStream(filePath, 'utf8'),
         crlfDelay: Infinity
       });
+      // for each line being read, the line event kicks off
+      readline.on('line', (line) => {
         // format each line into array
         const lineArray = this.parseLineIntoArray(line);
         // console.log('readFile, array:\n', lineArray);
         // push line into array
         fileData.push(lineArray);
         return fileData;
+      });
   }
 }
