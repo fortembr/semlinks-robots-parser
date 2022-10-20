@@ -81,7 +81,7 @@ export class RobotsParser {
         content: this.trimWhitespace(parsedLine.value.toLowerCase())
       };
     }
-    return parsedLine;
+    return { type: LineType.other, content: parsedLine };
   }
 
   public readFile(filePath: string) {
