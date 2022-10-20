@@ -102,5 +102,6 @@ export class RobotsParser {
         // console.log('readFile, array:\n', lineArray);
         // push line into array
         fileData.push(lineArray);
+        return fileData;
   }
 }
