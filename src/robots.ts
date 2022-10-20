@@ -92,5 +92,10 @@ export class RobotsParser {
       // console.log('parsed file:\n', readStream);
       return readStream;
     }
+      // create interface with the read stream
+      const readline = createInterface({
+        input: createReadStream(filePath, 'utf8'),
+        crlfDelay: Infinity
+      });
   }
 }
