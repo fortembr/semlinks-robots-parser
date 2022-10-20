@@ -3,6 +3,7 @@ import { LineSplit, LineType } from './options';
 import { createReadStream, readFileSync } from 'fs';
 import { createInterface } from 'readline';
 
+// Custom Modules
 export class RobotsParser {
   // remove whitespace before & after line to make parsing each line easier
   private trimWhitespace(line: string): string {
