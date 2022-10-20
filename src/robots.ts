@@ -3,7 +3,7 @@ import { createReadStream, readFileSync } from 'fs';
 import { createInterface } from 'readline';
 
 // Custom Modules
-import { LineSplit, LineType, ReturnType } from './options';
+import { Line, LineSplit, LineType, ReturnType } from './options';
 
 export class RobotsParser {
   // remove whitespace before & after line to make parsing each line easier
