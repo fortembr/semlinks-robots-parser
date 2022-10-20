@@ -33,7 +33,7 @@ export class RobotsParser {
     const len = line.length;
     const colonIndex = line.indexOf(':');
     return {
-      directive: line.substring(0, colonIndex),
+      directive: line.substring(0, colonIndex).toLowerCase(),
       value: line.substring(colonIndex + 1, len)
     };
   }
