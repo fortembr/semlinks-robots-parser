@@ -45,7 +45,7 @@ export class RobotsParser {
   }
 
   // parse file into array format
-  public parseLinesIntoArray(line: string): any {
+  private parseLineIntoArray(line: string): Line {
     // check to see if the line is a comment
     const isComment = this.isComment(line);
     // if the line is a comment, return line in format
