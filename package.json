@@ -1,6 +1,6 @@
 {
   "name": "@carbondigital/robots-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Robots parser that is used in our SEO application.",
   "author": {
     "name": "Carbon Digital",
@@ -25,7 +25,7 @@
     "clean": "rm -rf ./lib/",
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
-    "npm:publish": "npm publish --access public",
+    "npm:publish": "npm run clean && npm run build && npm publish --access public",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "start:dev": "nodemon -L ./src/index.ts && tsc -w",
