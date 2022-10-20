@@ -72,7 +72,7 @@ export class RobotsParser {
     if (isAllow) return { type: LineType.allow, content: parsedLine.value };
     // check for crawl-delay and return values
     const isCrawlDelay = this.checkDirective(parsedLine, LineType.crawlDelay);
-    if (isCrawlDelay) return { type: LineType.crawlDelay, value: parsedLine };
+    if (isCrawlDelay) return { type: LineType.crawlDelay, content: parsedLine.value };
     // check for sitemap and return values
     const isSitemap = this.checkDirective(parsedLine, LineType.sitemap);
     if (isSitemap) {
