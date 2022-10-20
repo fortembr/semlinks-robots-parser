@@ -30,7 +30,6 @@ export class RobotsParser {
   // split line by ":"
   // each directive in the robots file is separated by colon
   private splitLine(line: string): LineSplit {
-    const colonIndex = trimmedLine.indexOf(':');
     const len = line.length;
     const colonIndex = line.indexOf(':');
     return {
