@@ -55,7 +55,7 @@ export class RobotsParser {
     const isBlank = this.isBlank(trimmedLine);
     if (isBlank) return { type: LineType.blank, content: '' };
     // otherwise, split line and parse values
-    const parsedLine = this.splitLine(line);
+    const parsedLine = this.splitLine(trimmedLine);
     // check for user-agent and return values
     const isUserAgent = this.checkDirective(parsedLine, LineType.userAgent);
     if (isUserAgent) {
