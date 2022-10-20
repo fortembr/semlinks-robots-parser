@@ -45,7 +45,6 @@ export class RobotsParser {
   }
 
   // parse file into array format
-  // TODO: fix return type
   public parseLinesIntoArray(line: string): any {
     // check to see if the line is a comment
     const isComment = this.isComment(line);
