@@ -106,5 +106,11 @@ export class RobotsParser {
         fileData.push(lineArray);
         return fileData;
       });
+
+      // when all lines are read, close the stream
+      readline.on('close', () => {
+        console.log('updated array data:\n', fileData);
+        return fileData;
+      });
   }
 }
