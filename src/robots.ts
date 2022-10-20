@@ -52,6 +52,8 @@ export class RobotsParser {
     const isComment = this.isComment(trimmedLine);
     // if the line is a comment, return line in format
     if (isComment) return { type: LineType.comment, content: trimmedLine };
+    const isBlank = this.isBlank(trimmedLine);
+    if (isBlank) return { type: LineType.blank, content: '' };
     // otherwise, split line and parse values
     const parsedLine = this.splitLine(line);
     // check for user-agent and return values
