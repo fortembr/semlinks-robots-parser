@@ -40,6 +40,7 @@ export class RobotsParser {
 
   // check for user-agent
   private checkDirective(line: LineSplit, value: LineType): boolean {
+    // @ts-ignore-next-line
     return line.directive.toLowerCase().includes(value);
   }
 
