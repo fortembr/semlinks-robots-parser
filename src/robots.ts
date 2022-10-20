@@ -84,9 +84,6 @@ export class RobotsParser {
     return { type: LineType.other, content: parsedLine };
   }
 
-    // const array = this.parseLinesIntoArray(readStream)
-    // console.log('readFile, array: ', array)
-    return readStream;
   public parseFile(returnType: `${ReturnType}`, filePath: string) {
     // create empty array for returning data
     let fileData: any = [];
