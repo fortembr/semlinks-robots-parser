@@ -16,7 +16,7 @@ export interface LineSplit {
 
 export interface Line {
   type: LineType;
-  content: LineSplit;
+  content: LineSplit | string;
 }
 
 export enum ReturnType {
