@@ -78,7 +78,7 @@ export class RobotsParser {
     if (isSitemap) {
       return {
         type: LineType.sitemap,
-        value: { directive: parsedLine.directive, value: parsedLine.value.toLowerCase() }
+        content: this.trimWhitespace(parsedLine.value.toLowerCase())
       };
     }
     return parsedLine;
