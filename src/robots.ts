@@ -84,13 +84,16 @@ export class RobotsParser {
     return { type: LineType.other, content: parsedLine };
   }
 
-    const readStream = readFileSync(filePath, 'utf8');
-    console.log('readFile, readStream:\n', readStream);
     // const array = this.parseLinesIntoArray(readStream)
     // console.log('readFile, array: ', array)
     return readStream;
   public parseFile(returnType: `${ReturnType}`, filePath: string) {
     // create empty array for returning data
     let fileData: any = [];
+    if (returnType === ReturnType.console) {
+      const readStream = readFileSync(filePath, 'utf8');
+      // console.log('parsed file:\n', readStream);
+      return readStream;
+    }
   }
 }
