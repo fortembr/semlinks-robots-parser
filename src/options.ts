@@ -9,7 +9,7 @@ export enum LineType {
 }
 
 export interface LineSplit {
-  directive: string;
+  directive?: string;
   value: string;
 }
 
