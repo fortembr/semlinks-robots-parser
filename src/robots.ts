@@ -1,6 +1,7 @@
 import { LineSplit, LineType } from './options';
 // Node Modules
 import { createReadStream, readFileSync } from 'fs';
+import { createInterface } from 'readline';
 
 export class RobotsParser {
   // remove whitespace before & after line to make parsing each line easier
