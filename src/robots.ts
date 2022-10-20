@@ -49,7 +49,7 @@ export class RobotsParser {
     // trim spaces before-after line
     const trimmedLine = this.trimWhitespace(line);
     // check to see if the line is a comment
-    const isComment = this.isComment(line);
+    const isComment = this.isComment(trimmedLine);
     // if the line is a comment, return line in format
     if (isComment) return { type: LineType.comment, value: line };
     // otherwise, split line and parse values
