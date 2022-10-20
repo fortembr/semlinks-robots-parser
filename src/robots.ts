@@ -114,5 +114,6 @@ export class RobotsParser {
         return fileData;
       });
     }
+    return;
   }
 }
