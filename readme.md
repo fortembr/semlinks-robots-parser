@@ -17,9 +17,9 @@
     Search Engine Marketing (SEM) Links, which is the working title, is a Search Engine Optimization (SEO) tool. The current goal is to tackle all of the technical SEO areas of concern. The end goal aims much higher.
     <br>
     <br>
-    <a href="https://github.com/carbondigitalus/sem-links/issues" target="_blank">Features &amp; Bugs</a>
-    <!-- ·
-    <a href="https://fortembr.com/discord" target="_blank">Discord Community</a> -->
+    <a href="https://github.com/carbondigitalus/sem-links/issues" target="_blank">Module Bugs</a>
+    ·
+    <a href="https://semlinks.canny.io/semlinks" target="_blank">SEM Links Features</a>
   </p>
 </div>
 
@@ -207,3 +207,4 @@ Without these people and tools, life would be too complicated.
 [issues-url]: https://github.com/carbondigitalus/sem-links/issues
 [license-shield]: https://img.shields.io/github/license/carbondigitalus/sem-links.svg?style=for-the-badge
 [license-url]: https://github.com/carbondigitalus/sem-links/blob/master/license.md
+[canny-url]: https://semlinks.canny.io/semlinks
