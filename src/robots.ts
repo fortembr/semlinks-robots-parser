@@ -100,5 +100,7 @@ export class RobotsParser {
         // format each line into array
         const lineArray = this.parseLineIntoArray(line);
         // console.log('readFile, array:\n', lineArray);
+        // push line into array
+        fileData.push(lineArray);
   }
 }
