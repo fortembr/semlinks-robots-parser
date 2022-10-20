@@ -5,7 +5,8 @@ export enum LineType {
   disallow = 'disallow',
   sitemap = 'sitemap',
   crawlDelay = 'crawl-delay',
-  blank = 'blank'
+  blank = 'blank',
+  other = 'other'
 }
 
 export interface LineSplit {
