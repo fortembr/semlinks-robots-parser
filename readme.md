@@ -9,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/carbondigitalus/veterandb-backend/">
+  <a href="https://github.com/carbondigitalus/sem-links/">
     <img src="_repo/logo.png" alt="Logo" width="400" height="">
   </a>
   <h3 align="center">SEM Links</h3>
@@ -18,8 +18,8 @@
     <br>
     <br>
     <a href="https://github.com/carbondigitalus/sem-links/issues" target="_blank">Features &amp; Bugs</a>
-    ·
-    <a href="https://fortembr.com/discord" target="_blank">Discord Community</a>
+    <!-- ·
+    <a href="https://fortembr.com/discord" target="_blank">Discord Community</a> -->
   </p>
 </div>
 
@@ -44,7 +44,9 @@
 
 ## About The Project
 
-We wanted a tool internally that would help us rapidly scale our SEO efforts, but ultimately, give us the ability to migrate offf our current toolchain for SEO. Like many agencies, our team spent thousands on SEO-realted software each year.
+We wanted a tool internally that would help us rapidly scale our SEO efforts, but ultimately, give us the ability to migrate offf our current toolchain for SEO. Like many agencies, our team spent thousands on SEO-realted software each year. Since we're not a multi-million dollar agency, it always hurts to pay those bills.
+
+In light of that, we are building this software initially for our own team. We have already seen the power of competing with well-known tools that currently exist. One thing we aim to achieve is more honesty and more transparency. This is why we are building some modules has open-source NPM packages. So, give all developers the ability to see exactly what we're doing and contribute if they desire.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -52,11 +54,7 @@ We wanted a tool internally that would help us rapidly scale our SEO efforts, bu
 
 Below are the major frameworks/libraries that are currently used in this project, or soon to be added in a future release.
 
-- [jQuery](https://jquery.com)
-- [NestJS](https://nestjs.com)
 - [Node.js](https://nodejs.org/)
-- [React](https://reactjs.org/)
-- [TypeORM](https://typeorm.io)
 - [TypeScript](https://typescript.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -65,7 +63,89 @@ Below are the major frameworks/libraries that are currently used in this project
 
 ## Usage
 
-Usage docs coming soon.
+Console.Log your robots.txt file:
+
+```js
+import { robotsParser } from '@carbondigital/robots-parser';
+robotsParser('console', './my-robots-file.txt');
+```
+
+Logged Output:
+
+```
+Sitemap: https://carbondigital.us/sitemaps/post-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/page-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/projects-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/services-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/locations-sitemap1.xml
+Sitemap: https://carbondigital.us/sitemaps/category-sitemap1.xml
+
+User-agent: SemrushBot
+    Disallow: /
+User-agent: SemrushBot-SA
+    Disallow: /
+User-agent: MJ12bot
+    Disallow: /
+User-agent: Mediapartners-Google
+    Disallow:
+User-agent: Googlebot-Image
+    Disallow:
+User-agent: *
+    Disallow: /wp-admin/
+    Allow: /wp-admin/admin-ajax.php
+```
+
+Return Array of data from your robots.txt file:
+
+```js
+import { robotsParser } from '@carbondigital/robots-parser';
+robotsParser('browser', './my-robots-file.txt');
+```
+
+Array Output:
+
+```js
+[
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/post-sitemap1.xml'
+  },
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/page-sitemap1.xml'
+  },
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/projects-sitemap1.xml'
+  },
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/services-sitemap1.xml'
+  },
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/locations-sitemap1.xml'
+  },
+  {
+    type: 'sitemap',
+    content: 'https://carbondigital.us/sitemaps/category-sitemap1.xml'
+  },
+  { type: 'blank', content: '' },
+  { type: 'user-agent', content: 'SemrushBot' },
+  { type: 'disallow', content: ' /' },
+  { type: 'user-agent', content: 'SemrushBot-SA' },
+  { type: 'disallow', content: ' /' },
+  { type: 'user-agent', content: 'MJ12bot' },
+  { type: 'disallow', content: ' /' },
+  { type: 'user-agent', content: 'Mediapartners-Google' },
+  { type: 'disallow', content: '' },
+  { type: 'user-agent', content: 'Googlebot-Image' },
+  { type: 'disallow', content: '' },
+  { type: 'user-agent', content: '*' },
+  { type: 'disallow', content: ' /wp-admin/' },
+  { type: 'allow', content: ' /wp-admin/admin-ajax.php' }
+];
+```
 
 <!--
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -77,7 +157,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-Roadmap docs coming soon. We'll be using Canny for this software.
+We've got a simple setup on Canny. You can submit either a Github issue, or a Canny feature request for the SEM Links tool.
+
+- [Feature Requests in Canny](https://semlinks.canny.io/semlinks)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,7 +170,7 @@ Roadmap docs coming soon. We'll be using Canny for this software.
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Don't forget to give the project a star! Thanks again! See contributing.md for more details.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
