@@ -61,7 +61,7 @@ export class RobotsParser {
     if (isUserAgent) {
       return {
         type: LineType.userAgent,
-        value: { directive: parsedLine.directive, value: parsedLine.value.toLowerCase() }
+        content: this.trimWhitespace(parsedLine.value)
       };
     }
     // check for allow and return values
