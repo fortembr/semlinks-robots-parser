@@ -1,4 +1,3 @@
-import { Line } from './options';
 export declare class RobotsParser {
     private trimWhitespace;
     private isComment;
@@ -6,6 +5,6 @@ export declare class RobotsParser {
     private splitLine;
     private checkDirective;
     private parseLineIntoArray;
-    parseFile(filePath: string): Promise<Line[]>;
+    parseFile(filePath: string): Promise<unknown>;
     logFile(filePath: string): string;
 }
