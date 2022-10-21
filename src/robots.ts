@@ -85,30 +85,35 @@ export class RobotsParser {
   }
 
   public async parseFile(filePath: string): Promise<Line[]> {
-    // create empty array for returning data
-    let fileData: any = [];
-    // create interface with the read stream
-    const readline = createInterface({
-      input: createReadStream(filePath, 'utf8'),
-      crlfDelay: Infinity
+    return new Promise((resolve, reject) => {
+      // create empty array for returning data
+      let fileData: any = [];
+      // create interface with the read stream
+      const readline = createInterface({
+        input: createReadStream(filePath, 'utf8'),
+        crlfDelay: Infinity
+      });
+      // for each line being read, the line event kicks off
+      readline.on('line', (line) => {
+        // format each line into array
+        const lineArray = this.parseLineIntoArray(line);
+        // console.log('readFile, array:\n', lineArray);
+        // push line into array
+        fileData.push(lineArray);
+        return fileData;
+      });
+      readline.on('error', (error) => {
+        console.log('parseFile error:\n', error);
+        reject(error);
+      });
+      // when all lines are read, close the stream
+      readline.on('close', () => {
+        console.log('updated array data:\n', fileData);
+        resolve(fileData);
+      });
     });
-    // for each line being read, the line event kicks off
-    readline.on('line', (line) => {
-      // format each line into array
-      const lineArray = this.parseLineIntoArray(line);
-      // console.log('readFile, array:\n', lineArray);
-      // push line into array
-      fileData.push(lineArray);
-      return fileData;
-    });
-
-    // when all lines are read, close the stream
-    await readline.on('close', () => {
-      console.log('updated array data:\n', fileData);
-      return fileData;
-    });
-    return fileData;
   }
+
   public logFile(filePath: string) {
     const readStream = readFileSync(filePath, 'utf8');
     // console.log('parsed file:\n', readStream);
