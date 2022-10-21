@@ -1,4 +1,4 @@
-import { ReturnType } from './options';
+import { Line } from './options';
 export declare class RobotsParser {
     private trimWhitespace;
     private isComment;
@@ -6,5 +6,6 @@ export declare class RobotsParser {
     private splitLine;
     private checkDirective;
     private parseLineIntoArray;
-    parseFile(returnType: `${ReturnType}`, filePath: string): string | undefined;
+    parseFile(filePath: string): Promise<Line[]>;
+    logFile(filePath: string): string;
 }
