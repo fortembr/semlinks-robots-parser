@@ -84,36 +84,34 @@ export class RobotsParser {
     return { type: LineType.other, content: parsedLine };
   }
 
-  public parseFile(returnType: `${ReturnType}`, filePath: string) {
+  public async parseFile(filePath: string): Promise<Line[]> {
     // create empty array for returning data
     let fileData: any = [];
-    if (returnType === ReturnType.console) {
-      const readStream = readFileSync(filePath, 'utf8');
-      // console.log('parsed file:\n', readStream);
-      return readStream;
-    }
-    if (returnType === ReturnType.browser) {
-      // create interface with the read stream
-      const readline = createInterface({
-        input: createReadStream(filePath, 'utf8'),
-        crlfDelay: Infinity
-      });
-      // for each line being read, the line event kicks off
-      readline.on('line', (line) => {
-        // format each line into array
-        const lineArray = this.parseLineIntoArray(line);
-        // console.log('readFile, array:\n', lineArray);
-        // push line into array
-        fileData.push(lineArray);
-        return fileData;
-      });
+    // create interface with the read stream
+    const readline = createInterface({
+      input: createReadStream(filePath, 'utf8'),
+      crlfDelay: Infinity
+    });
+    // for each line being read, the line event kicks off
+    readline.on('line', (line) => {
+      // format each line into array
+      const lineArray = this.parseLineIntoArray(line);
+      // console.log('readFile, array:\n', lineArray);
+      // push line into array
+      fileData.push(lineArray);
+      return fileData;
+    });
 
-      // when all lines are read, close the stream
-      readline.on('close', () => {
-        console.log('updated array data:\n', fileData);
-        return fileData;
-      });
-    }
-    return;
+    // when all lines are read, close the stream
+    await readline.on('close', () => {
+      console.log('updated array data:\n', fileData);
+      return fileData;
+    });
+    return fileData;
+  }
+  public logFile(filePath: string) {
+    const readStream = readFileSync(filePath, 'utf8');
+    // console.log('parsed file:\n', readStream);
+    return readStream;
   }
 }
