@@ -84,7 +84,7 @@ export class RobotsParser {
     return { type: LineType.other, content: parsedLine };
   }
 
-  public async parseFile(filePath: string): Promise<Line[]> {
+  public async parseFile(filePath: string) {
     return new Promise((resolve, reject) => {
       // create empty array for returning data
       let fileData: any = [];
