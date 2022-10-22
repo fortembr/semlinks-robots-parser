@@ -147,6 +147,95 @@ Array Output:
 ];
 ```
 
+Our SEM Links app is a Nest.js project. In that project, we have a data wrapper so all returned data is part of a "data" object. When testing this in Postman, here is the same data being returned.
+
+```json
+{
+  "data": [
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/post-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/page-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/projects-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/services-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/locations-sitemap1.xml"
+    },
+    {
+      "type": "sitemap",
+      "content": "https://carbondigital.us/sitemaps/category-sitemap1.xml"
+    },
+    {
+      "type": "blank",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "SemrushBot"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "SemrushBot-SA"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "MJ12bot"
+    },
+    {
+      "type": "disallow",
+      "content": "/"
+    },
+    {
+      "type": "user-agent",
+      "content": "Mediapartners-Google"
+    },
+    {
+      "type": "disallow",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "Googlebot-Image"
+    },
+    {
+      "type": "disallow",
+      "content": ""
+    },
+    {
+      "type": "user-agent",
+      "content": "*"
+    },
+    {
+      "type": "disallow",
+      "content": "/wp-admin/"
+    },
+    {
+      "type": "allow",
+      "content": "/wp-admin/admin-ajax.php"
+    }
+  ]
+}
+```
+
 <!--
 _For more examples, please refer to the [Documentation](https://example.com)_
 -->
