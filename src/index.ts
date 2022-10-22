@@ -11,6 +11,8 @@ export default async function robotsParser(returnType: `${ReturnType}`, filePath
   }
   if (returnType === ReturnType.browser) {
     // format array method
-    await robotsParser.parseFile(filePath);
+    const data = await robotsParser.parseFile(filePath);
+    return data;
   }
+  return;
 }
